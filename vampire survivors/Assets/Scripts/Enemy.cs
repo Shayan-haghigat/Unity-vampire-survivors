@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour,IDamageable
 {
    Transform targetDistination;
     [SerializeField] float speed;
@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] int hp = 4;
     [SerializeField] int damage = 1;
+    [SerializeField] int experience_reward = 400;
     private void Awake() {
         rigidbody2D = GetComponent<Rigidbody2D>();
         
@@ -47,6 +48,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage){
         hp -= damage;
         if(hp <= 0){
+            targetgameObject.GetComponent<Level>().AddExperience(experience_reward);
             Destroy(gameObject);
         }
     }
