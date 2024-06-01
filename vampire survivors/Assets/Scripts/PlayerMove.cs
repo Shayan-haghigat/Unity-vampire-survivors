@@ -19,6 +19,11 @@ public class PlayerMove : MonoBehaviour
         movementVector = new Vector3();
         animate = GetComponent<Animate>();
     }
+
+    private void Start() {
+        lastHorizontalVector = -1f;
+        lastVerticalVector = 1f ;
+    }
     
 
     // Update is called once per frame
