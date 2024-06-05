@@ -1,12 +1,10 @@
 using System;
 using UnityEngine;
 
-public class ThrowingDaggerWeapon : MonoBehaviour
+public class ThrowingDaggerWeapon : WeaponBase
 {
-    [SerializeField] private float timeToAttack = 1f;
     [SerializeField] private GameObject knifePrefab;
     
-    private float timer;
     private PlayerMove playerMove;
 
     private void Awake() 
@@ -14,18 +12,12 @@ public class ThrowingDaggerWeapon : MonoBehaviour
         playerMove = GetComponentInParent<PlayerMove>();
     }
 
-    private void Update() 
-    {
-        timer += Time.deltaTime;
+    // private void SpawnKnife()
+    // {
 
-        if (timer >= timeToAttack)
-        {
-            timer = 0;
-            SpawnKnife();
-        }
-    }
+    // }
 
-    private void SpawnKnife()
+    public override void Attack()// همون اسپان نایف سابق
     {
         if (knifePrefab == null || playerMove == null)
         {

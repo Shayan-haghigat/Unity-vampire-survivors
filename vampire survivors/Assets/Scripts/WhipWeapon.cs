@@ -3,46 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WhipWeapon : MonoBehaviour
+public class WhipWeapon : WeaponBase
 {
-    [SerializeField]float timetoAttack = 1.5f;
-    float timer;
 
     [SerializeField] GameObject leftWhipObject;
     [SerializeField] GameObject rightWhipObject;
 
     PlayerMove playerMove;
-    [SerializeField] Vector2 whipRange = new Vector2(4f, 2f);
-
-    [SerializeField] int whipDamage = 1;
+    [SerializeField] Vector2 Attack_Size = new Vector2(4f, 2f);
 
     private void Awake()
     {
         playerMove = GetComponentInParent<PlayerMove>();
     }
-    void Update()
-    {
-       timer -= Time.deltaTime;
 
-       if(timer <= 0f){
-        Attack();
-       }
-    }
 
-    private void Attack()
+    public override void Attack()
     {
 
-        timer = timetoAttack;
 
         if (playerMove.lastHorizontalVector > 0)
         {
             rightWhipObject.SetActive(true);
-            Collider2D [] colliders = Physics2D.OverlapBoxAll(rightWhipObject.transform.position, whipRange, 0f);
+            Collider2D [] colliders = Physics2D.OverlapBoxAll(rightWhipObject.transform.position, Attack_Size, 0f);
             ApplyDamage(colliders);
         }
         else{
             leftWhipObject.SetActive(true);
-            Collider2D [] colliders = Physics2D.OverlapBoxAll(leftWhipObject.transform.position, whipRange, 0f);
+            Collider2D [] colliders = Physics2D.OverlapBoxAll(leftWhipObject.transform.position, Attack_Size, 0f);
             ApplyDamage(colliders);
         }
     }
@@ -52,9 +40,12 @@ public class WhipWeapon : MonoBehaviour
         foreach (Collider2D collider in colliders){
             IDamageable enemy = collider.GetComponent<IDamageable>();
             if (enemy != null){
+                PostDamage(weaponStatus.damage , collider.transform.position);
            // collider.GetComponent<Enemy>().TakeDamage(whipDamage);
-           enemy.TakeDamage(whipDamage);
+           enemy.TakeDamage(weaponStatus.damage);
             }
         }
     }
+
+
 }

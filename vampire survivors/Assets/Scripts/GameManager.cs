@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
   public static GameManager Instance;
+  // همون سینگلتون هستش 
     private void Awake()
     {
         Instance = this;
