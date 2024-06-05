@@ -6888,6 +6888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnableObject
       objectReference: {fileID: 0}
+    - target: {fileID: 2119165944192794017, guid: ebe55adfbe8fb2b42a1dbe2fdcfb1def, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7889630949563163744, guid: ebe55adfbe8fb2b42a1dbe2fdcfb1def, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.03
