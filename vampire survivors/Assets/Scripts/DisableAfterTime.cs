@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DisableAfterTime : MonoBehaviour
 {
-    float timetoDisable = 0.8f;
+    float timetoDisable = 0.2f;
     float timer ;
     // Start is called before the first frame update
     private void OnEnable() {

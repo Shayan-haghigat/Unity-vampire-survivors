@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrowingDaggerProjectile : MonoBehaviour
+public class ThrowingKnifeProjectile : MonoBehaviour
 {
-    private Vector3 direction;
+     Vector3 direction;
     [SerializeField] private float speed = 10f;
-    [SerializeField] private int damage = 5;
+    public int damage = 5;
+    float ttl = 6f;
     private bool hitDetected = false;
 
     // Method to set the direction of the projectile
@@ -32,6 +33,11 @@ public class ThrowingDaggerProjectile : MonoBehaviour
         if (Time.frameCount % 6 == 0)
         {
             CheckForCollisions();
+        }
+        ttl -= Time.deltaTime;
+        if (ttl<0f )
+        {
+        Destroy(gameObject);
         }
     }
 

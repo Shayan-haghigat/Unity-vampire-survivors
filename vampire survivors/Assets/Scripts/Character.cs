@@ -9,6 +9,8 @@ public class Character : MonoBehaviour
     public int currentHp = 1000;
 
     public int armor = 0;
+    public float hpRegenerationRate = 1f;
+    public float hpRegenerationTime;
     [SerializeField] StatusBar hpBar;
     [HideInInspector] public Level level;
     [HideInInspector] public Coins coins;
@@ -22,6 +24,15 @@ public class Character : MonoBehaviour
     private void Start()
     {
         hpBar.Setstatus(currentHp,maxHp);
+    }
+    public void Update()
+    {
+        hpRegenerationTime += Time.deltaTime * hpRegenerationRate;
+        if (hpRegenerationTime > 1f)
+        {
+            Heal(1);
+            hpRegenerationTime -= 1f;
+        }
     }
     public void TakeDamage(int damage)
     {

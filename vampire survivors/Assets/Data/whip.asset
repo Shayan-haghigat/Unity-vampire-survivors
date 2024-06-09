@@ -10,10 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Weapon_Test#1
+  m_Name: whip
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   Name: Whip
   weaponStatus:
     damage: 10
     timeToAttack: 2.5
+    numberOfAttack: 3
   weaponBasePrefab: {fileID: 5656517830671642347, guid: 494653d282baa804facd2fbe37eb0199, type: 3}
+  upgrades:
+  - {fileID: 11400000, guid: 3bc68efa7f7455c41b18d57af0894b8d, type: 2}
+  - {fileID: 11400000, guid: 3a51130797bb3514bbdaa63b8400e77c, type: 2}
+  - {fileID: 11400000, guid: 535aa9ea5f244b646b3d25bfa6916db1, type: 2}

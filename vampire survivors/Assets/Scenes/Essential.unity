@@ -256,8 +256,8 @@ Transform:
   m_GameObject: {fileID: 164097976}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 0.26000002, z: 1}
+  m_LocalPosition: {x: 0.7479, y: 0, z: 0}
+  m_LocalScale: {x: 1.5042, y: 0.26000002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 595050724}
@@ -4394,6 +4394,7 @@ GameObject:
   - component: {fileID: 2040006137}
   - component: {fileID: 2040006138}
   - component: {fileID: 2040006139}
+  - component: {fileID: 2040006140}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -4532,9 +4533,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c84edf7dd1e0643a47f8a56b3ba211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 10000
-  currentHp: 10000
+  maxHp: 1000
+  currentHp: 700
   armor: 0
+  hpRegenerationRate: 1
+  hpRegenerationTime: 0
   hpBar: {fileID: 1474558358}
   level: {fileID: 0}
   coins: {fileID: 0}
@@ -4552,10 +4555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   experienceBar: {fileID: 540010107}
   upgradePanel: {fileID: 1750116590}
-  upgrades:
-  - {fileID: 11400000, guid: adca6a907698ebe41894f4362d77429a, type: 2}
-  - {fileID: 11400000, guid: 66e69661d3e3b9446ab2b35fbb46b9b0, type: 2}
-  - {fileID: 11400000, guid: 6254bcc50e640c8439be64616a69999c, type: 2}
+  upgrades: []
   acquiredUpgrades: []
 --- !u!114 &2040006136
 MonoBehaviour:
@@ -4606,13 +4606,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040006128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a30e82a8a5120f498328140ad7504c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObjectContainer: {fileID: 918014274}
   StartingWeapon: {fileID: 11400000, guid: 8889ec1d4fe9e07459f3a2606d9fd0be, type: 2}
+--- !u!114 &2040006140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040006128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a30e82a8a5120f498328140ad7504c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponObjectContainer: {fileID: 918014274}
+  StartingWeapon: {fileID: 11400000, guid: 82895e55e41a55840aafc77b037ad17b, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
