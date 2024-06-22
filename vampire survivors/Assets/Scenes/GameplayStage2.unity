@@ -148,6 +148,8 @@ GameObject:
   m_Component:
   - component: {fileID: 35980451}
   - component: {fileID: 35980450}
+  - component: {fileID: 35980452}
+  - component: {fileID: 35980453}
   m_Layer: 0
   m_Name: ---WORLD---
   m_TagString: Untagged
@@ -199,6 +201,32 @@ Transform:
   - {fileID: 1399812571}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &35980452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35980449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab930c087bc87414eb084c8824aa6a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
+--- !u!114 &35980453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35980449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0600cfa78b68034ba018942c73f1369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageData: {fileID: 11400000, guid: 7eb07c3fb74ff4149b8e20418248ed45, type: 2}
 --- !u!4 &38143343 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1497527948831500108, guid: d23ff0e23cadec340a1214d2d382ae5a, type: 3}

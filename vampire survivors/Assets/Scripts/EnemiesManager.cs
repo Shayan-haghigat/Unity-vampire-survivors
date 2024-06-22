@@ -9,22 +9,13 @@ public class EnemiesManager : MonoBehaviour
     [SerializeField] Vector2 spawnArea;
     [SerializeField] float spawntimer;
     GameObject player;
-    float timer;
     private void Start()
     {
         player = GameManager.Instance.playerTransform.gameObject;
     }
+    
 
-    private void Update() {
-        timer -= Time.deltaTime;
-
-        if(timer <= 0f){
-            SpawnEnemy();
-            timer = spawntimer;
-        }
-    }
-
-    private void SpawnEnemy()
+    public void SpawnEnemy()
     {
         Vector3 position = GenerateRandomPosition();
         position += player.transform.position;
