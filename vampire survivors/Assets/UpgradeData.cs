@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public enum UpgradeType
@@ -18,4 +19,6 @@ public class UpgradeData : ScriptableObject
 
     public WeaponData weaponData ;
     public WeaponStats weaponUpgradesStats ;
+    public Item item;
+    public ItemStats itemStats;
 }

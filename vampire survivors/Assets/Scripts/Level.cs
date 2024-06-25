@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,13 +8,18 @@ public class Level : MonoBehaviour
     [SerializeField] ExperienceBar experienceBar;
     [SerializeField] UpgradePanelManager upgradePanel;
     [SerializeField] List<UpgradeData> upgrades;
-    List<UpgradeData> selectedUpgrades;
-    [SerializeField]List<UpgradeData> acquiredUpgrades;
+    List<UpgradeData> selectedUpgrades = new List<UpgradeData>();
+    [SerializeField] List<UpgradeData> acquiredUpgrades = new List<UpgradeData>();
     WeaponManager weaponManager;
+    PassiveItems passiveItems;
+    [SerializeField] List<UpgradeData> upgradesAvailableOnStart;
+
     private void Awake()
     {
         weaponManager = GetComponent<WeaponManager>();
+        passiveItems = GetComponent<PassiveItems>();
     }
+
     int TO_LEVEL_UP
     {
         get
@@ -23,33 +27,40 @@ public class Level : MonoBehaviour
             return level * 1000;
         }
     }
+
     internal void AddUpgradesIntoTheListOfAvailableUpgrades(List<UpgradeData> UpgradesToAdd)
     {
+        if (UpgradesToAdd == null)
+        {
+            return;
+        }
         this.upgrades.AddRange(UpgradesToAdd);
     }
+
     private void Start()
     {
-        experienceBar.UpdateExperienceSlider(experience,TO_LEVEL_UP);
+        experienceBar.UpdateExperienceSlider(experience, TO_LEVEL_UP);
         experienceBar.SetLevelText(level);
+        AddUpgradesIntoTheListOfAvailableUpgrades(upgradesAvailableOnStart);
     }
+
     public void AddExperience(int amount)
     {
         experience += amount;
         CheckLevelUP();
-        experienceBar.UpdateExperienceSlider(experience,TO_LEVEL_UP);
+        experienceBar.UpdateExperienceSlider(experience, TO_LEVEL_UP);
     }
+
     public void CheckLevelUP()
     {
-        if (experience >=TO_LEVEL_UP) {
-           LevelUp();
+        if (experience >= TO_LEVEL_UP)
+        {
+            LevelUp();
         }
     }
+
     private void LevelUp()
     {
-        if (selectedUpgrades == null)
-        {
-            selectedUpgrades = new List<UpgradeData>();
-        }
         selectedUpgrades.Clear();
         selectedUpgrades.AddRange(GetUpgrades(4));
         upgradePanel.OpenPanel(selectedUpgrades);
@@ -60,45 +71,50 @@ public class Level : MonoBehaviour
 
     public List<UpgradeData> GetUpgrades(int count)
     {
-        List<UpgradeData> upgrade_list = new List<UpgradeData>() ;
+        List<UpgradeData> upgrade_list = new List<UpgradeData>();
 
-        if ( count > upgrades.Count)
+        if (count > upgrades.Count)
         {
-            count = upgrades.Count ;
+            count = upgrades.Count;
         }
+
         for (int i = 0; i < count; i++)
         {
-            upgrade_list.Add(upgrades[Random.Range(0 , upgrades.Count)]);
+            int randomIndex = Random.Range(0, upgrades.Count);
+            upgrade_list.Add(upgrades[randomIndex]);
+            upgrades.RemoveAt(randomIndex);
         }
-
-
 
         return upgrade_list;
     }
 
     public void Upgrade(int selectedUpgradeID)
     {
+        if (selectedUpgradeID < 0 || selectedUpgradeID >= selectedUpgrades.Count)
+        {
+            Debug.LogWarning("Invalid upgrade ID selected.");
+            return;
+        }
+
         UpgradeData upgradeData = selectedUpgrades[selectedUpgradeID];
 
-        if (acquiredUpgrades == null)
-        {
-            acquiredUpgrades = new List<UpgradeData>();
-        }
         switch (upgradeData.upgradeType)
         {
             case UpgradeType.WeaponUpgrade:
                 weaponManager.UpgradeWeapon(upgradeData);
                 break;
             case UpgradeType.ItemUpgrade:
+                passiveItems.UpgradeItem(upgradeData);
                 break;
             case UpgradeType.WeaponUnlock:
                 weaponManager.AddWeapon(upgradeData.weaponData);
                 break;
             case UpgradeType.ItemUnlock:
+                passiveItems.Equip(upgradeData.item);
+                AddUpgradesIntoTheListOfAvailableUpgrades(upgradeData.item.upgrades);
                 break;
         }
+
         acquiredUpgrades.Add(upgradeData);
-        upgrades.Remove(upgradeData);
     }
-   
 }

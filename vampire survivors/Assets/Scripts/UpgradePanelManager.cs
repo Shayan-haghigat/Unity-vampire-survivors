@@ -1,16 +1,15 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class UpgradePanelManager : MonoBehaviour
 {
     [SerializeField] GameObject panel;
-    PuaseManager puaseManager;
-    [SerializeField] List<UpgradeButton> upgradeButtons ;
-    public void Awake()
+    [SerializeField] List<UpgradeButton> upgradeButtons;
+    PuaseManager pauseManager;
+
+    private void Awake()
     {
-        puaseManager = GetComponent<PuaseManager>();
+        pauseManager = GetComponent<PuaseManager>();
     }
 
     private void Start()
@@ -21,9 +20,10 @@ public class UpgradePanelManager : MonoBehaviour
     public void OpenPanel(List<UpgradeData> upgradeDatas)
     {
         Clean();
-        puaseManager.PuaseGame();
+        pauseManager.PuaseGame();
         panel.SetActive(true);
-        for (int i = 0; i < upgradeDatas.Count; i++)
+
+        for (int i = 0; i < upgradeDatas.Count && i < upgradeButtons.Count; i++)
         {
             upgradeButtons[i].gameObject.SetActive(true);
             upgradeButtons[i].Set(upgradeDatas[i]);
@@ -32,29 +32,36 @@ public class UpgradePanelManager : MonoBehaviour
 
     public void Clean()
     {
-        for (int i = 0; i < upgradeButtons.Count; i++)
+        foreach (var button in upgradeButtons)
         {
-            upgradeButtons[i].Clean();
+            button.Clean();
         }
     }
 
     public void Upgrade(int pressedButtonID)
     {
+        if (pressedButtonID < 0 || pressedButtonID >= upgradeButtons.Count)
+        {
+            Debug.LogWarning("Invalid button ID pressed.");
+            return;
+        }
+
         GameManager.Instance.playerTransform.GetComponent<Level>().Upgrade(pressedButtonID);
         ClosePanel();
     }
+
     public void ClosePanel()
     {
         HideButtons();
-        puaseManager.OnPuaseGame();
+        pauseManager.OnPuaseGame();
         panel.SetActive(false);
     }
 
     private void HideButtons()
     {
-        for (int i = 0; i < upgradeButtons.Count; i++)
+        foreach (var button in upgradeButtons)
         {
-            upgradeButtons[i].gameObject.SetActive(false);
+            button.gameObject.SetActive(false);
         }
     }
 }
