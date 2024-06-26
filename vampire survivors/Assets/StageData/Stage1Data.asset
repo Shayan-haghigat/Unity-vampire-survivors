@@ -15,13 +15,13 @@ MonoBehaviour:
   StageEvents:
   - time: 5
     massage: Let Rock!
-    enemyToSpawn: {fileID: 0}
-    Count: 10
-  - time: 60
+    enemyToSpawn: {fileID: 11400000, guid: 8259066248ca9744fa1aff0d8be955be, type: 2}
+    Count: 20
+  - time: 15
     massage: You did good !
-    enemyToSpawn: {fileID: 0}
-    Count: 35
-  - time: 300
+    enemyToSpawn: {fileID: 11400000, guid: 2c46f461c27eb2c4a9ed42328271945a, type: 2}
+    Count: 45
+  - time: 60
     massage: You Still alive ?!
-    enemyToSpawn: {fileID: 0}
+    enemyToSpawn: {fileID: 11400000, guid: 8259066248ca9744fa1aff0d8be955be, type: 2}
     Count: 80

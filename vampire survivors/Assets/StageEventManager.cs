@@ -21,7 +21,7 @@ public class StageEventManager : MonoBehaviour
         {
             for (int i = 0; i < 25; i++)
             {
-                enemiesManager.SpawnEnemy();
+                enemiesManager.SpawnEnemy(stageData.StageEvents[eventIndexer].enemyToSpawn);
             }
             return;
         }
@@ -30,7 +30,7 @@ public class StageEventManager : MonoBehaviour
             Debug.Log(stageData.StageEvents[eventIndexer].massage);
             for (int i = 0; i < stageData.StageEvents[eventIndexer].Count; i++)
             {
-                enemiesManager.SpawnEnemy();
+                enemiesManager.SpawnEnemy(stageData.StageEvents[eventIndexer].enemyToSpawn);
             }
             eventIndexer++;
         }

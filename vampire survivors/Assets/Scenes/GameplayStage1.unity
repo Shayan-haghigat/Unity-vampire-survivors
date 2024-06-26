@@ -6592,9 +6592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c94d001387fc894d9328f5c43aede12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 4796692005743425850, guid: 3e97be9fd19bd4343a9d45892ed132e2, type: 3}
+  enemy: {fileID: 7874552332241110813, guid: fe96d0490de1c1f42a936946e6c53c3d, type: 3}
   spawnArea: {x: 15, y: 8}
-  spawntimer: 2
+  spawntimer: 0
 --- !u!4 &2089329863
 Transform:
   m_ObjectHideFlags: 0
