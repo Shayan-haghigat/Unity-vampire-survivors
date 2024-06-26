@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: PumpInHeadArmored
   animatedPrefab: {fileID: 8580300625063542418, guid: 2432794acddb6c643ac027e021d7c5fe, type: 3}
+  stats:
+    hp: 15
+    damage: 100
+    experience_reward: 600
+    movespeed: 1.5
