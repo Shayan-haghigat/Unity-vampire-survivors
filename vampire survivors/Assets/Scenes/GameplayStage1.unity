@@ -257,8 +257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stagetime: {fileID: 0}
-  progressTimeRate: 30
-  progressPerSplit: 0.1
+  progressTimeRate: 10
+  progressPerSplit: 0.5
 --- !u!4 &38143343 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1497527948831500108, guid: d23ff0e23cadec340a1214d2d382ae5a, type: 3}
