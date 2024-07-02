@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectDispose : MonoBehaviour
 {
     Transform playerTransform;
-    float maxDistance=25f;
+    float maxDistance=50f;
 
     private void Start()
     {

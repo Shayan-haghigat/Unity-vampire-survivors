@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Stage1Data
   m_EditorClassIdentifier: 
   StageEvents:
-  - time: 5
+  - time: 1000
     massage: Let Rock!
     enemyToSpawn: {fileID: 11400000, guid: 8259066248ca9744fa1aff0d8be955be, type: 2}
     Count: 20
-  - time: 15
+  - time: 1000
     massage: You did good !
     enemyToSpawn: {fileID: 11400000, guid: 2c46f461c27eb2c4a9ed42328271945a, type: 2}
     Count: 45
-  - time: 60
+  - time: 1000
     massage: You Still alive ?!
     enemyToSpawn: {fileID: 11400000, guid: 8259066248ca9744fa1aff0d8be955be, type: 2}
     Count: 80
