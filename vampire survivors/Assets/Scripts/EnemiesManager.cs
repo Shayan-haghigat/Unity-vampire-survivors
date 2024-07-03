@@ -9,7 +9,7 @@ public class EnemiesManager : MonoBehaviour
     [SerializeField] StageProgress stageProgress;
     [SerializeField] GameObject enemy;
     [SerializeField] Vector2 spawnArea;
-    [SerializeField] float spawntimer;
+
     GameObject player;
     List<Enemy> bossEnemiesList;
     int totalBossHealth;
@@ -21,6 +21,7 @@ public class EnemiesManager : MonoBehaviour
     {
         player = GameManager.Instance.playerTransform.gameObject;
         bossHealthBar = FindObjectOfType<BossHpBar>(true).GetComponent<Slider>();
+        stageProgress = FindObjectOfType<StageProgress>();
     }
 
     private void Update()
@@ -50,11 +51,11 @@ public class EnemiesManager : MonoBehaviour
 
     public void SpawnEnemy(EnemyData enemyToSpawn, bool isBoss)
     {
-        if (enemySpawned)
-        {
-            Debug.Log("Enemy already spawned. No new enemy will be spawned.");
-            return; // Prevents spawning more than one enemy
-        }
+      //  if (enemySpawned)
+       // {
+       //     Debug.Log("Enemy already spawned. No new enemy will be spawned.");
+       //     return; // Prevents spawning more than one enemy
+       // }
 
         Vector3 position = GenerateRandomPosition();
         position += player.transform.position;

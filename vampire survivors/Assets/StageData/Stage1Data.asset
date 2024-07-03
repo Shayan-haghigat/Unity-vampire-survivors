@@ -15,11 +15,11 @@ MonoBehaviour:
   StageEvents:
   - time: 3
     stageEventType: 1
-    massage: Let Rock!
+    massage: 
     enemyToSpawn: {fileID: 11400000, guid: 060ce975341aaf84eafc2bc5bae29be5, type: 2}
-    Count: 10
-  - time: 25
-    stageEventType: 0
-    massage: Let Rock!
-    enemyToSpawn: {fileID: 11400000, guid: 8259066248ca9744fa1aff0d8be955be, type: 2}
     Count: 1
+  - time: 7
+    stageEventType: 0
+    massage: 
+    enemyToSpawn: {fileID: 11400000, guid: 8259066248ca9744fa1aff0d8be955be, type: 2}
+    Count: 20

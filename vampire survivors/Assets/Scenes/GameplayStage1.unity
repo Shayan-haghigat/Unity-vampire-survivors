@@ -261,7 +261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 7eb07c3fb74ff4149b8e20418248ed45, type: 2}
-  enemiesManager: {fileID: 0}
 --- !u!114 &35980454
 MonoBehaviour:
   m_ObjectHideFlags: 0

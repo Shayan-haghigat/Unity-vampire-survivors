@@ -6,13 +6,17 @@ using UnityEngine;
 public class StageEventManager : MonoBehaviour
 {
     [SerializeField] StageData stageData;
-    [SerializeField] EnemiesManager enemiesManager;
+     EnemiesManager enemiesManager;
     StageTime stageTime;
     int eventIndexer;
 
     private void Awake()
     {
         stageTime = GetComponent<StageTime>();
+    }
+    private void Start()
+    {
+        enemiesManager = FindObjectOfType<EnemiesManager>();
     }
 
     private void Update()

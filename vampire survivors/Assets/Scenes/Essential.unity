@@ -5954,7 +5954,6 @@ MonoBehaviour:
   stageProgress: {fileID: 0}
   enemy: {fileID: 7874552332241110813, guid: fe96d0490de1c1f42a936946e6c53c3d, type: 3}
   spawnArea: {x: 15, y: 8}
-  spawntimer: 0
   bossHealthBar: {fileID: 0}
 --- !u!4 &2089329863
 Transform:
