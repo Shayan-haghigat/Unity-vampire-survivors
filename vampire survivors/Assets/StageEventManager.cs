@@ -19,20 +19,40 @@ public class StageEventManager : MonoBehaviour
     {
         if (eventIndexer >= stageData.StageEvents.Count)
         {
-            for (int i = 0; i < 25; i++)
-            {
-                enemiesManager.SpawnEnemy(stageData.StageEvents[eventIndexer].enemyToSpawn);
-            }
             return;
         }
+
         if (stageTime.time > stageData.StageEvents[eventIndexer].time)
         {
-            Debug.Log(stageData.StageEvents[eventIndexer].massage);
-            for (int i = 0; i < stageData.StageEvents[eventIndexer].Count; i++)
-            {
-                enemiesManager.SpawnEnemy(stageData.StageEvents[eventIndexer].enemyToSpawn);
-            }
+            HandleStageEvent(stageData.StageEvents[eventIndexer]);
             eventIndexer++;
         }
+    }
+
+    private void HandleStageEvent(StageEvent stageEvent)
+    {
+        switch (stageEvent.stageEventType)
+        {
+            case StageEventType.SpawnEnemy:
+                SpawnEnemies(stageEvent);
+                break;
+            case StageEventType.SpawnEnemyBoss:
+                SpawnEnemyBoss(stageEvent);
+                break;
+        }
+    }
+
+    private void SpawnEnemies(StageEvent stageEvent)
+    {
+        Debug.Log(stageEvent.massage);
+        for (int i = 0; i < stageEvent.Count; i++)
+        {
+            enemiesManager.SpawnEnemy(stageEvent.enemyToSpawn, false);
+        }
+    }
+
+    private void SpawnEnemyBoss(StageEvent stageEvent)
+    {
+        enemiesManager.SpawnEnemy(stageEvent.enemyToSpawn, true);
     }
 }
