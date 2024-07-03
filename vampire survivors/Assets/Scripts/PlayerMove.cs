@@ -6,9 +6,13 @@ public class PlayerMove : MonoBehaviour
 {
     Rigidbody2D rgbd2d;
     [HideInInspector]
-   public float lastHorizontalVector;
+    public float lastHorizontalDecoupledVector;
     [HideInInspector]
-    public float lastVerticalVector;
+    public float lastVerticalDecoupledVector;
+    public float lastHorizontalcoupleVector;
+    [HideInInspector]
+    public float lastVerticalcoupleVector;
+
     [HideInInspector]
      public Vector3 movementVector;
     Animate animate;
@@ -21,8 +25,10 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void Start() {
-        lastHorizontalVector = -1f;
-        lastVerticalVector = 1f ;
+        lastHorizontalDecoupledVector = -1f;
+        lastVerticalDecoupledVector = 1f ;
+        lastHorizontalcoupleVector = -1f;
+        lastVerticalcoupleVector = 1f;
     }
     
 
@@ -31,17 +37,27 @@ public class PlayerMove : MonoBehaviour
     {
         movementVector.x = Input.GetAxisRaw("Horizontal");
         movementVector.y = Input.GetAxisRaw("Vertical");
+        if (movementVector.x != 0 || movementVector.y != 0)
+        {
+            lastHorizontalcoupleVector = movementVector.x;
+            lastVerticalcoupleVector = movementVector.y;
+
+        }
         if (movementVector.x != 0)
         {
-            lastHorizontalVector = movementVector.x;
+            lastHorizontalDecoupledVector = movementVector.x;
         }
         if (movementVector.y != 0)
         {
-            lastVerticalVector = movementVector.y;
+            lastVerticalDecoupledVector = movementVector.y;
         }
         animate.horizontal = movementVector.x;
         movementVector *= speed;
 
         rgbd2d.velocity = movementVector;
+    }
+    public Vector2 GetDirection()
+    {
+        return new Vector2(lastHorizontalDecoupledVector, lastVerticalDecoupledVector).normalized;
     }
 }

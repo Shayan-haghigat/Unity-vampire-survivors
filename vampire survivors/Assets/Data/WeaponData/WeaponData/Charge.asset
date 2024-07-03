@@ -10,5 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2587d49d7805a594281b4f607a83f268, type: 3}
-  m_Name: Throwing Knife
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  m_Name: Charge
+  m_EditorClassIdentifier: 
+  Name: MardEsfehaniSabani
+  weaponStatus:
+    damage: 80
+    timeToAttack: 3
+    numberOfAttack: 1
+  weaponBasePrefab: {fileID: 1593265115964115607, guid: 70e749ca04b537e4eac74568ac4a2bc0, type: 3}
+  upgrades: []

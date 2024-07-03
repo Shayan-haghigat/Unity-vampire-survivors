@@ -143,11 +143,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b199da553d0c5ae4597fa147d77ba3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timetoAttack: 2
+  weaponStatus:
+    damage: 0
+    timeToAttack: 0
+    numberOfAttack: 0
+  weaponData: {fileID: 11400000, guid: b2ae192ff4bdc9f408d381573d908dc7, type: 2}
+  timer: 1
+  _vectorOfAttack: {x: 0, y: 0}
+  _attackDirection: 1
   leftWhipObject: {fileID: 1288137009497697335}
   rightWhipObject: {fileID: 6861640197572826445}
-  whipRange: {x: 4, y: 2}
-  whipDamage: 1
+  Attack_Size: {x: 4, y: 2}
 --- !u!1 &6861640197572826445
 GameObject:
   m_ObjectHideFlags: 0

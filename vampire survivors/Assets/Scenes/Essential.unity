@@ -5493,13 +5493,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040006128}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a30e82a8a5120f498328140ad7504c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObjectContainer: {fileID: 918014274}
-  StartingWeapon: {fileID: 11400000, guid: 8889ec1d4fe9e07459f3a2606d9fd0be, type: 2}
+  StartingWeapon: {fileID: 11400000, guid: 935822da87f765849852839765ced14a, type: 2}
 --- !u!114 &2040006140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5507,13 +5507,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040006128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a30e82a8a5120f498328140ad7504c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObjectContainer: {fileID: 918014274}
-  StartingWeapon: {fileID: 11400000, guid: 82895e55e41a55840aafc77b037ad17b, type: 2}
+  StartingWeapon: {fileID: 11400000, guid: 2ed0d714d5c62df4aa0e6ee4129a28d4, type: 2}
 --- !u!1 &2054837632
 GameObject:
   m_ObjectHideFlags: 0

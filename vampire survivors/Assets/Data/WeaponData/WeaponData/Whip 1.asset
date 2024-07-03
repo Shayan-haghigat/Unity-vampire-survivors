@@ -12,3 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2587d49d7805a594281b4f607a83f268, type: 3}
   m_Name: Whip 1
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  Name: Whip
+  weaponStatus:
+    damage: 10
+    timeToAttack: 2
+    numberOfAttack: 3
+  weaponBasePrefab: {fileID: 5656517830671642347, guid: 494653d282baa804facd2fbe37eb0199, type: 3}
+  upgrades: []

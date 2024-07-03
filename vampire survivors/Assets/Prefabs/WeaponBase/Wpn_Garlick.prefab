@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2108657052384000073
+--- !u!1 &1646598660316946738
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8201883453857977486}
-  - component: {fileID: 4232547246606162533}
+  - component: {fileID: 1460683338892064509}
+  - component: {fileID: 3375512995348223287}
   m_Layer: 0
-  m_Name: Wpn_ThrowingKnife
+  m_Name: Wpn_Garlick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8201883453857977486
+--- !u!4 &1460683338892064509
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108657052384000073}
+  m_GameObject: {fileID: 1646598660316946738}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4232547246606162533
+--- !u!114 &3375512995348223287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108657052384000073}
+  m_GameObject: {fileID: 1646598660316946738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25e8f8bcc0b8ddc48a7e8c186decad5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 054cbe10925c0034388c648435856c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponStatus:
     damage: 0
     timeToAttack: 0
     numberOfAttack: 0
-  weaponData: {fileID: 11400000, guid: afdfebb7b8d7ca74c91a8fe60766ffad, type: 2}
-  timer: 0.5
-  _vectorOfAttack: {x: 0, y: 0}
-  _attackDirection: 3
-  knifePrefab: {fileID: 6592963752932295156, guid: 67ff72ff6d8df614d98316d160d7bcbd, type: 3}
-  spread: 0.5
+  weaponData: {fileID: 11400000, guid: cf38dded647823c43844600f7d49d6b5, type: 2}
+  timer: 1
+  attackAreaSize: 10

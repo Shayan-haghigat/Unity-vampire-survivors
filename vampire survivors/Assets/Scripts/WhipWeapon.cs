@@ -27,7 +27,7 @@ public class WhipWeapon : WeaponBase
     {
         for (int i = 0; i < weaponStatus.numberOfAttack; i++)
         {
-            if (playerMove.lastHorizontalVector > 0)
+            if (playerMove.lastHorizontalDecoupledVector> 0)
              {
                   rightWhipObject.SetActive(true);
                   Collider2D [] colliders = Physics2D.OverlapBoxAll(rightWhipObject.transform.position, Attack_Size, 0f);
@@ -42,19 +42,7 @@ public class WhipWeapon : WeaponBase
         }
     }
 
-    private void ApplyDamage(Collider2D[] colliders)
-    {
-        int damage = GetDamage();
-        foreach (Collider2D collider in colliders){
-            IDamageable enemy = collider.GetComponent<IDamageable>();
-            if (enemy != null)
-            { 
-                PostDamage(damage , collider.transform.position);
-           // collider.GetComponent<Enemy>().TakeDamage(whipDamage);
-           enemy.TakeDamage(damage);
-            }
-        }
-    }
+
 
 
 }
