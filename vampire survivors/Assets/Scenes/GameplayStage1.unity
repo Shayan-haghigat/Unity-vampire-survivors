@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageData: {fileID: 11400000, guid: 7eb07c3fb74ff4149b8e20418248ed45, type: 2}
-  enemiesManager: {fileID: 2089329862}
+  enemiesManager: {fileID: 0}
 --- !u!114 &35980454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10141,55 +10141,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 777805146370439732, guid: 7fe28e8bc43e8904ab78583046bf0df8, type: 3}
   m_PrefabInstance: {fileID: 2044389461}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2089329861
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2089329863}
-  - component: {fileID: 2089329862}
-  m_Layer: 0
-  m_Name: ---ENEMYES---
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2089329862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089329861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c94d001387fc894d9328f5c43aede12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageProgress: {fileID: 35980455}
-  enemy: {fileID: 7874552332241110813, guid: fe96d0490de1c1f42a936946e6c53c3d, type: 3}
-  spawnArea: {x: 15, y: 8}
-  spawntimer: 0
-  bossHealthBar: {fileID: 0}
---- !u!4 &2089329863
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089329861}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2100963512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 777805146370439732, guid: 7fe28e8bc43e8904ab78583046bf0df8, type: 3}
@@ -10666,6 +10617,5 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 2089329863}
   - {fileID: 35980451}
   - {fileID: 1720991151}
