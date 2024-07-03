@@ -7,8 +7,8 @@ public abstract class WeaponBase : MonoBehaviour
 {   
     public WeaponStats weaponStatus;
     public WeaponData weaponData;
-    
     public float timer;
+    Character wielder;
     public void Update() {
         timer -= Time.deltaTime;
         if (timer < 0f)
@@ -33,5 +33,16 @@ public abstract class WeaponBase : MonoBehaviour
     public void Upgrade(UpgradeData upgradeData)
     {
         weaponStatus.Sum(upgradeData.weaponUpgradesStats); 
+    }
+
+    public void AddOwnerCharacter(Character character)
+    {
+        wielder = character;
+    }
+
+    public int GetDamage()
+    {
+        int damage = (int)(weaponData.weaponStatus.damage * wielder.damageBonus);
+        return damage;
     }
 }

@@ -8,9 +8,11 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] Transform weaponObjectContainer;
     [SerializeField] WeaponData StartingWeapon;
     List<WeaponBase> weapons;
+    Character _character;
     private void Awake()
     {
         weapons = new List<WeaponBase>();
+        _character = GetComponent<Character>();
     }
 
     private void Start() {
@@ -41,6 +43,7 @@ public class WeaponManager : MonoBehaviour
         WeaponBase weaponBase = gameObject.GetComponent<WeaponBase>();
         weaponBase.SetData(weaponData);
         weapons.Add(weaponBase);
+        weaponBase.AddOwnerCharacter(_character);
         Level level = GetComponent<Level>();
         if(level != null)
         {

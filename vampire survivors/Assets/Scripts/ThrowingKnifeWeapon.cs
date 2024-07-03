@@ -92,7 +92,7 @@ public class ThrowingKnifeWeapon : WeaponBase
             // Assuming SetDirection takes two float arguments: horizontal and vertical
             throwingDaggerProjectile.SetDirection(playerMove.lastHorizontalVector, 0f);
             // Assuming weaponStatus is defined in the base class or somewhere else
-            throwingDaggerProjectile.damage = weaponStatus.damage;
+            throwingDaggerProjectile.damage = GetDamage();
         }
         else
         {

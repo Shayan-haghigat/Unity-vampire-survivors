@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -11,11 +12,12 @@ public class Character : MonoBehaviour
     public int armor = 0;
     public float hpRegenerationRate = 1f;
     public float hpRegenerationTime;
+    public float damageBonus;
     [SerializeField] StatusBar hpBar;
     [HideInInspector] public Level level;
     [HideInInspector] public Coins coins;
     private bool isDead = false;
-
+    [SerializeField] DataContainer _dataContainer;
     private void Awake()
     {
         level = GetComponent<Level>();
@@ -23,8 +25,18 @@ public class Character : MonoBehaviour
     }
     private void Start()
     {
+        ApplyPersistantUpgrades();// اعمال قدرت های خریداری شده در منوی اصلی 
         hpBar.Setstatus(currentHp,maxHp);
     }
+
+    private void ApplyPersistantUpgrades()
+    {
+       int hpUpgradeLevel = _dataContainer.GetUpgradeLevel(PlayerPresistentUpgrades.Hp);
+       maxHp += maxHp / 10 * hpUpgradeLevel;
+       int damageUpgradeLevel = _dataContainer.GetUpgradeLevel(PlayerPresistentUpgrades.Damage);
+       damageBonus = 1f + 0.1f * damageUpgradeLevel;
+    }
+
     public void Update()
     {
         hpRegenerationTime += Time.deltaTime * hpRegenerationRate;
