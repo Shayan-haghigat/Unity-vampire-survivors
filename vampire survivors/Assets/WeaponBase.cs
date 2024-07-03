@@ -13,7 +13,7 @@ public enum DirectionOfAttack
 
 public abstract class WeaponBase : MonoBehaviour
 {
-    protected PlayerMove _playerMove;
+    public PlayerMove _playerMove;
     public WeaponStats weaponStatus;
     public WeaponData weaponData;
     public float timer;

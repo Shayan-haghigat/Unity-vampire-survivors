@@ -9,13 +9,10 @@ public class WhipWeapon : WeaponBase
     [SerializeField] GameObject leftWhipObject;
     [SerializeField] GameObject rightWhipObject;
 
-    PlayerMove playerMove;
+   
     [SerializeField] Vector2 Attack_Size = new Vector2(4f, 2f);
 
-    private void Awake()
-    {
-        playerMove = GetComponentInParent<PlayerMove>();
-    }
+ 
 
 
     public override void Attack()
@@ -27,7 +24,7 @@ public class WhipWeapon : WeaponBase
     {
         for (int i = 0; i < weaponStatus.numberOfAttack; i++)
         {
-            if (playerMove.lastHorizontalDecoupledVector> 0)
+            if (_playerMove.lastHorizontalDecoupledVector> 0)
              {
                   rightWhipObject.SetActive(true);
                   Collider2D [] colliders = Physics2D.OverlapBoxAll(rightWhipObject.transform.position, Attack_Size, 0f);

@@ -21,9 +21,14 @@ public class DataContainer : ScriptableObject
 {
     public int coins;
     public List<PlayerUpgrades> upgrades;
+    public CharecterData selectedCharacter;
 
     public int GetUpgradeLevel(PlayerPresistentUpgrades presistentUpgrades)
     {
        return upgrades[(int)presistentUpgrades].level; // فراموش نشه که این بر اساس شماره اینام بالا کار میکنه سوییچ کیس نداشتم !!!!
+    }
+    public void SetSelectedCharecter(CharecterData charecter)
+    {
+        selectedCharacter = charecter;
     }
 }

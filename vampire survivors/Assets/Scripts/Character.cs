@@ -18,6 +18,7 @@ public class Character : MonoBehaviour
     [HideInInspector] public Coins coins;
     private bool isDead = false;
     [SerializeField] DataContainer _dataContainer;
+   // [SerializeField] CharecterData selectedCharecter;
     private void Awake()
     {
         level = GetComponent<Level>();
@@ -25,8 +26,20 @@ public class Character : MonoBehaviour
     }
     private void Start()
     {
+        LoadSelectedCharecter(_dataContainer.selectedCharacter);
         ApplyPersistantUpgrades();// اعمال قدرت های خریداری شده در منوی اصلی 
         hpBar.Setstatus(currentHp,maxHp);
+    }
+    private void LoadSelectedCharecter(CharecterData selectedCharecter)
+    {
+        InitAnimation(selectedCharecter.spritePrefab);
+        GetComponent<WeaponManager>().AddWeapon(selectedCharecter.startingWeapon);
+    }
+    private void InitAnimation(GameObject spritePrefab)
+    {
+        GameObject animObject =Instantiate(spritePrefab,transform);
+        GetComponent<Animate>().SetAnimate(animObject);
+
     }
 
     private void ApplyPersistantUpgrades()

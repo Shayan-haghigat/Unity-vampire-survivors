@@ -6,7 +6,7 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
     [SerializeField] Transform weaponObjectContainer;
-    [SerializeField] WeaponData StartingWeapon;
+    //[SerializeField] WeaponData StartingWeapon;
     List<WeaponBase> weapons;
     Character _character;
     private void Awake()
@@ -15,13 +15,13 @@ public class WeaponManager : MonoBehaviour
         _character = GetComponent<Character>();
     }
 
-    private void Start() {
-        if (StartingWeapon != null) {
-            AddWeapon(StartingWeapon);
-        } else {
-            Debug.LogError("StartingWeapon is not assigned in the inspector.");
-        }
-    }
+   // private void Start() {
+     //   if (StartingWeapon != null) {
+    //        AddWeapon(StartingWeapon);
+    //    } else {
+    //        Debug.LogError("StartingWeapon is not assigned in the inspector.");
+    //    }
+   // }
 
     public void AddWeapon(WeaponData weaponData){
         if (weaponData == null) {
