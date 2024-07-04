@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shayan (charecter)
   m_EditorClassIdentifier: 
   Name: 
-  spritePrefab: {fileID: 6094468457568975892, guid: 59f722418d51f6b4e816861ec54c5ad5, type: 3}
+  spritePrefab: {fileID: 6094468457568975892, guid: 3677372d7e703f84e99237056c094ae4, type: 3}
   startingWeapon: {fileID: 11400000, guid: 935822da87f765849852839765ced14a, type: 2}
