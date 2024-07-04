@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeType: 0
   Name: Blunt Throwing knife
   icon: {fileID: 21300000, guid: ef4443c28ea06f74d9519b17efcfe100, type: 3}
-  weaponData: {fileID: 11400000, guid: 82895e55e41a55840aafc77b037ad17b, type: 2}
+  weaponData: {fileID: 11400000, guid: afdfebb7b8d7ca74c91a8fe60766ffad, type: 2}
   weaponUpgradesStats:
     damage: 5
     timeToAttack: -0.5

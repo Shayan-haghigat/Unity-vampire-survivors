@@ -15,4 +15,11 @@ MonoBehaviour:
   upgradeType: 1
   Name: Throwing Dagger
   icon: {fileID: 21300000, guid: 9c7acca51cfc0d847973e99b1a963816, type: 3}
-  weaponData: {fileID: 11400000, guid: 82895e55e41a55840aafc77b037ad17b, type: 2}
+  weaponData: {fileID: 11400000, guid: afdfebb7b8d7ca74c91a8fe60766ffad, type: 2}
+  weaponUpgradesStats:
+    damage: 0
+    timeToAttack: 0
+    numberOfAttack: 0
+  item: {fileID: 0}
+  itemStats:
+    armor: 0
