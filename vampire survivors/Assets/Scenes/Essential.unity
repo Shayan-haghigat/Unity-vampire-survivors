@@ -1682,6 +1682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 540010108}
   levelText: {fileID: 552289406}
+  _dataContainer: {fileID: 11400000, guid: b545854739c97b344b7ded919a5ca616, type: 2}
 --- !u!114 &540010108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5617,6 +5618,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 694937b8bac976045be9f7123551bd6f, type: 2}
   - {fileID: 11400000, guid: aff8860e02fed10479cde419e59af222, type: 2}
   - {fileID: 11400000, guid: 44490a7335ee6de418daf4cf3d35a8f0, type: 2}
+  - {fileID: 11400000, guid: e58f98aeba24452488b4232a3b1c3a1e, type: 2}
+  - {fileID: 11400000, guid: 1237f708afab4f14ab243b46c1e5b6e2, type: 2}
+  - {fileID: 11400000, guid: d3258d26e8bead147bab9030c13e9737, type: 2}
   acquiredUpgrades:
   - {fileID: 0}
   upgradesAvailableOnStart:

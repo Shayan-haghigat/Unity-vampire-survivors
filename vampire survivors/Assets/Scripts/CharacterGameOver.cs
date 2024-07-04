@@ -9,9 +9,10 @@ public class CharacterGameOver : MonoBehaviour
  public void GameOver()
  {
 
-    Debug.Log("Game Over");
+     Debug.Log("Game Over");
    GetComponent<PlayerMove>().enabled = false ;
     GameOverPanel.SetActive(true);
     weoponParent.SetActive(false);
  }
+ 
 }

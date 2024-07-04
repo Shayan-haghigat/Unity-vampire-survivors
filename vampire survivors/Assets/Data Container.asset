@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a7269aaa0c10564db71372776147071, type: 3}
   m_Name: Data Container
   m_EditorClassIdentifier: 
-  coins: 10
+  coins: 18
   upgrades:
   - presistentUpgrades: 0
     level: 0
@@ -22,3 +22,5 @@ MonoBehaviour:
     level: 0
     max_level: 10
     costToUpgrade: 100
+  selectedCharacter: {fileID: 11400000, guid: 0df7b32894bc2b54a968db135055a0bc, type: 2}
+  highestScore: 1500
