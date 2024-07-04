@@ -44,11 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19c45fd6c4884b4f888bfe2959c5d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerMove: {fileID: 0}
   weaponStatus:
     damage: 0
     timeToAttack: 0
     numberOfAttack: 0
-  weaponData: {fileID: 0}
+  weaponData: {fileID: 11400000, guid: 935822da87f765849852839765ced14a, type: 2}
   timer: 3
   _vectorOfAttack: {x: 0, y: 0}
   _attackDirection: 1

@@ -5594,7 +5594,6 @@ MonoBehaviour:
   level: {fileID: 0}
   coins: {fileID: 0}
   _dataContainer: {fileID: 11400000, guid: b545854739c97b344b7ded919a5ca616, type: 2}
-  selectedCharecter: {fileID: 11400000, guid: 0fe00587f20bcc0498981198b279c580, type: 2}
 --- !u!114 &2040006135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5609,8 +5608,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   experienceBar: {fileID: 540010107}
   upgradePanel: {fileID: 1750116590}
-  upgrades: []
-  acquiredUpgrades: []
+  upgrades:
+  - {fileID: 11400000, guid: 3a51130797bb3514bbdaa63b8400e77c, type: 2}
+  - {fileID: 11400000, guid: 535aa9ea5f244b646b3d25bfa6916db1, type: 2}
+  - {fileID: 11400000, guid: 3bc68efa7f7455c41b18d57af0894b8d, type: 2}
+  - {fileID: 11400000, guid: 79b5c5e0d3dcd1147827e81f10f7ab53, type: 2}
+  - {fileID: 11400000, guid: 4500b3904cf8a6a438755faffb079dd9, type: 2}
+  - {fileID: 11400000, guid: 694937b8bac976045be9f7123551bd6f, type: 2}
+  - {fileID: 11400000, guid: aff8860e02fed10479cde419e59af222, type: 2}
+  - {fileID: 11400000, guid: 44490a7335ee6de418daf4cf3d35a8f0, type: 2}
+  acquiredUpgrades:
+  - {fileID: 0}
   upgradesAvailableOnStart:
   - {fileID: 11400000, guid: 44490a7335ee6de418daf4cf3d35a8f0, type: 2}
 --- !u!114 &2040006136
@@ -5667,7 +5675,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObjectContainer: {fileID: 918014274}
-  StartingWeapon: {fileID: 11400000, guid: 935822da87f765849852839765ced14a, type: 2}
 --- !u!114 &2040006140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5681,7 +5688,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponObjectContainer: {fileID: 918014274}
-  StartingWeapon: {fileID: 11400000, guid: b2ae192ff4bdc9f408d381573d908dc7, type: 2}
 --- !u!1 &2054837632
 GameObject:
   m_ObjectHideFlags: 0
