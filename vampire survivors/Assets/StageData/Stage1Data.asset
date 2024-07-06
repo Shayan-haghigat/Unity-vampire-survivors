@@ -14,12 +14,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StageEvents:
   - time: 3
-    stageEventType: 1
+    stageEventType: 0
     massage: 
-    enemyToSpawn: {fileID: 11400000, guid: 060ce975341aaf84eafc2bc5bae29be5, type: 2}
-    Count: 1
-  - time: 7
+    enemyToSpawn: {fileID: 11400000, guid: 8259066248ca9744fa1aff0d8be955be, type: 2}
+    Count: 10
+  - time: 12
+    stageEventType: 0
+    massage: 
+    enemyToSpawn: {fileID: 11400000, guid: 8259066248ca9744fa1aff0d8be955be, type: 2}
+    Count: 30
+  - time: 30
+    stageEventType: 0
+    massage: 
+    enemyToSpawn: {fileID: 11400000, guid: 2c46f461c27eb2c4a9ed42328271945a, type: 2}
+    Count: 15
+  - time: 45
     stageEventType: 0
     massage: 
     enemyToSpawn: {fileID: 11400000, guid: 8259066248ca9744fa1aff0d8be955be, type: 2}
     Count: 20
+  - time: 60
+    stageEventType: 0
+    massage: 
+    enemyToSpawn: {fileID: 11400000, guid: 2c46f461c27eb2c4a9ed42328271945a, type: 2}
+    Count: 20
+  - time: 90
+    stageEventType: 0
+    massage: 
+    enemyToSpawn: {fileID: 11400000, guid: 2c46f461c27eb2c4a9ed42328271945a, type: 2}
+    Count: 25
+  - time: 120
+    stageEventType: 1
+    massage: 
+    enemyToSpawn: {fileID: 11400000, guid: 060ce975341aaf84eafc2bc5bae29be5, type: 2}
+    Count: 1
