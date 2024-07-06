@@ -161,4 +161,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: 50
   amount: 1500
-  healAmount: 200
+  healAmount: 1000
